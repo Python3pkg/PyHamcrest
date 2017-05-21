@@ -147,8 +147,8 @@ def has_properties(*keys_valuematchers, **kv_args):
         for index in range(int(len(keys_valuematchers) / 2)):
             base_dict[keys_valuematchers[2 * index]] = wrap_shortcut(keys_valuematchers[2 * index + 1])
 
-    for key, value in kv_args.items():
+    for key, value in list(kv_args.items()):
         base_dict[key] = wrap_shortcut(value)
 
     return all_of(*[has_property(property_name, property_value_matcher) for \
-                   property_name, property_value_matcher in base_dict.items()])
+                   property_name, property_value_matcher in list(base_dict.items())])

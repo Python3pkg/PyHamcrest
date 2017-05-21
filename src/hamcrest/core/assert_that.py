@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 from hamcrest.core.matcher import Matcher
 from hamcrest.core.string_description import StringDescription
 

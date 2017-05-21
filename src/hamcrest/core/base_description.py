@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 __author__ = "Jon Reid"
 __copyright__ = "Copyright 2011 hamcrest.org"
 __license__ = "BSD, see License.txt"
@@ -54,7 +54,7 @@ class BaseDescription(Description):
         warnings.warn('Call append_list instead of append_value_list',
                       DeprecationWarning)
         return self.append_list(start, separator, end,
-                                map(SelfDescribingValue, list))
+                                list(map(SelfDescribingValue, list)))
 
     def append_list(self, start, separator, end, list):
         separate = False

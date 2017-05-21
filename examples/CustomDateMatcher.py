@@ -37,12 +37,12 @@ def on_a_saturday():
 class SampleTest(unittest.TestCase):
     def testDateIsOnASaturday(self):
         """Example of successful match."""
-        d = datetime.date(2008, 04, 26)
+        d = datetime.date(2008, 0o4, 26)
         assert_that(d, is_(on_a_saturday()))
 
     def testFailsWithMismatchedDate(self):
         """Example of what happens with date that doesn't match."""
-        d = datetime.date(2008, 04, 06)
+        d = datetime.date(2008, 0o4, 0o6)
         assert_that(d, is_(on_a_saturday()))
 
     def testFailsWithNonDate(self):

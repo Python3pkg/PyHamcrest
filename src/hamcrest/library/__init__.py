@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 """Library of Matcher implementations."""
 
 from hamcrest.core import *

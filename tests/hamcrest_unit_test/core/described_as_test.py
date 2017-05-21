@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 
 from hamcrest.core.core.described_as import *
 

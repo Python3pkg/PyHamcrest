@@ -75,5 +75,5 @@ params = dict(
     **extra_attributes
     )
 
-all_params = dict(params.items(), **extra_attributes)
+all_params = dict(list(params.items()), **extra_attributes)
 setup(**all_params)

@@ -127,7 +127,7 @@ def has_entries(*keys_valuematchers, **kv_args):
         for index in range(int(len(keys_valuematchers) / 2)):
             base_dict[keys_valuematchers[2 * index]] = wrap_matcher(keys_valuematchers[2 * index + 1])
 
-    for key, value in kv_args.items():
+    for key, value in list(kv_args.items()):
         base_dict[key] = wrap_matcher(value)
 
     return IsDictContainingEntries(base_dict)

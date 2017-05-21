@@ -1,4 +1,4 @@
-from __future__ import absolute_import
+
 from .selfdescribing import SelfDescribing
 
 __author__ = "Jon Reid"

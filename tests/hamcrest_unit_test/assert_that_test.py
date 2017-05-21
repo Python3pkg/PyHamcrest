@@ -1,5 +1,5 @@
 # encoding: utf-8
-from __future__ import with_statement
+
 from hamcrest.core.assert_that import assert_that
 from hamcrest.core.core.isequal import equal_to
 try:

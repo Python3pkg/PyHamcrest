@@ -15,7 +15,7 @@ class IsDictContaining(BaseMatcher):
 
     def _matches(self, dictionary):
         if hasmethod(dictionary, 'items'):
-            for key, value in dictionary.items():
+            for key, value in list(dictionary.items()):
                 if self.key_matcher.matches(key) and self.value_matcher.matches(value):
                     return True
         return False
